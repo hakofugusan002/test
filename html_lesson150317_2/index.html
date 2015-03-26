@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="ごはんレシピ">
+		<title>ごはんレシピ</title>
+		<link rel="shotrtcut icon" href="favicon.icon">　<!--rel属性で引用先がアイコンを示す -->
+		<link rel="stylesheet" href=" styles.css">
+		<!--<style>body{background-color: blue;}</style> -->
+	</head>
+	<body>	
+	<!--
+	id: 同じファイル内にひとつしかつえない
+	class: 同じファイル内に副薄使える
+	style: スタイルを直接指定することができる
+	 -->
+
+	 <!--
+	header:
+	footer:
+	nav: ナビゲーション
+	article:  メインコンテンツ、独立しているコンテンツ　ニュース記事やブログエントリー 
+	aside: 副次的なコンテンツ　補足情報、広告など
+	secrrion: それ以外の情報のかたまり、見出し必須
+	h1-h6 
+	 -->	
+
+
+	<header>
+		 <h1>おいしいごはん！</h1>
+		<nav>
+			ーホーム
+			ーこのサイトについて
+			ープロフィール
+		</nav>
+	</header>
+
+	<section>
+		<h1>今月のおいしいごはん</h1>
+		<article>
+			<h1>おいしいごはん#12</h1>
+			至高のTKG
+		</article>
+	</section>
+
+	<section>
+		<h1>新着のおいしいごはん</h1>
+		<article>
+			<h1>おいしいごはん#32</h1>
+			はもしゃぶ
+		</article>
+
+		<article>
+			<h1>おいしいごはん#31</h1>
+			スリランカカレー
+		</article>
+	</section>
+	
+	<aside>
+		<h1>おすすめレシピ本</h1>
+		ーBOOK 1
+		ーBOOK 2
+		ーBOOK 3
+	</aside>
+
+	<footer>
+		このサイトは@tagichiによって運営されています
+	</footer>
+
+
+	  <!--
+	p:  段落
+	hr:  水平線
+	pre: 改行や字下げを保持
+	blockquate: 引用
+	div:  スタイリング
+	 -->	
+
+	 <!--
+	strong
+	br
+	span
+	 -->	
+
+	<article>
+		<div style="background-color:green;">
+			<h1><a href="#stuff">おいしいごはん</a></h1>
+			<p><img src="sukoyaka_FB用image案.jpg" witdh="128px" height="82px" alt="かおだい"></p>
+			<p>至高の<br><strong>TKG</strong></p>
+		</div>
+		<hr>
+		<p><span style="color:gold">ところで</span>あの件は</p>
+		<pre>
+			poem
+				poem
+					poem
+		</pre>
+
+		<blockquate>TKG</blockquate>
+
+
+	</article>
+	 
+	<!--
+	ol (orderd list) / ul (unordered list) / li(list item)
+	dl(definition list) / dt (defintion term) / dd(definision description)   
+	 -->	
+	 <article>
+	 	<h1>たまごかけごはんの作り方</h1>
+	 	<p>卵かけごはんの作り方を解説します</p>
+	 	<h2 >作り方</h2>
+	 	<h3 >材料</h3>
+	 	<ul>
+	 		<li><a href="http://dotinstall.com/" target="_blank">卵</a></li>
+	 		<li>しょうゆ</li>
+	 		<li>ごはん</li>
+	 	</ul>
+	 	<p><a href="more.html">もっと読む</a></p>
+
+	 	<ol>
+	 		<li>割る</li>
+	 		<li>まぜる</li>
+	 		<li>かける</li>
+	 	</ol>
+
+	 	<dl>
+	 		<dt>TKG</dt>
+	 		<dd>TAMAGO KAKE GOHAN</dd>
+	 		<dd id="stuff">たまごかけごはんのことです</dd>
+
+	 	</dl>
+	 </article>
+
+<!--
+table
+thead
+tbody
+tr: table row
+th: table header
+td: table data
+-->
+
+<table>
+<thead>
+	<tr>
+		<th>size</th>
+		<th>price</th>
+	</tr>
+<tbody>
+	<tr>
+		<td>S</td>
+		<td>150</td>
+	</tr>
+
+	<tr>
+		<td>M</td>
+		<td>200</td>
+	</tr>
+
+	<tr>
+		<td colspan="2">2 column</td>
+	</tr>
+
+<!--
+form
+	action：どこに送るか？
+	method：
+-->
+<!--
+input
+	text
+	submit
+	password
+	hidden
+
+	checkbox
+	radio
+	lavel
+
+	select
+	option
+
+	<html5> 　参考） http://caniuse.com/
+	email
+	number
+	data
+-->
+<article>
+<h1>アンケート</h1>
+<form action ="survey.php" method="post" validate>
+<!--<p>メールアドレス：<input type="text" name="email" size="50" maxlength="5" value="abc"></p>-->
+<p>メールアドレス：<input type="text" name="email" size="50" placeholder="please enter email"></p>
+
+ <p>メールアドレス<input type="email" name="email"  required></p>
+ <p>料金<input type="number" name="price" ></p>
+ <p>誕生日<input type="date" name="birthday" ></p>
+
+<p>City：
+	<select name="city" multiple size="5">
+		<option value="tokyo">Tokyo</option>
+		<option value="kyoto" selected>Kyoto</option>
+		<option value="osaka">Osaka</option>
+		<option value="fukuoka">Fukuoka</option>
+		<option value="sapporo">Sapporo</option>
+	</select>
+</p>
+
+
+<p>phone：
+<label><input type="checkbox" name="phone"  value="android" checked>android</label>
+<input type="checkbox" name="phone" value="iphone" id="iphone">
+<label for="iphone">iphone</label>
+</p>
+
+<p>phone：
+<label><input type="radio" name="color"  value="red" checked>red</label>
+<input type="radio" name="color" value="white">white
+</p>
+
+<p>コメント：<textarea name="comment" cols="40" rows="5" disabled>コメント</textarea>
+</p>
+
+<p>ログイン<input type="password" name="password"></p>
+
+<input type="hidden" name="user_id" value="23456">
+<p><input type="submit" value="送信"></p>
+
+<p><button type="button" >送信</button></p>
+<p><button type="button" disabled>処理をする</button></p>
+
+
+</article>
+
+<!--
+文字参照
+&#60;
+&lt;
+&quot
+-->
+
+
+<!--
+タグ
+	カテゴリー：どの分類か？
+	コンテンツモデル：どのカテゴリーのタグを入れられるか？
+	→特定のタグしか入らないとか、入れちゃダメとかある 　参考） http://validator.w3.org/
+		トランスペアレント：親要素のコンテンツモデルを使ってね？
+-->
+
+<h1>文字参照</h1>
+<p>「&lt;p&gt;タグを段落です」</p>
+<input type="text" value="区切りは&quot;文字です">
+<p>「この記号の文字参照は&amp;quot;です」</p>
+
+<article>
+
+<h1><a>title</a></h1>
+
+
+</tbody>
+
+
+</thead>
+<tbody></tbody>
+</table>
+	</body>
+	
+</html>
